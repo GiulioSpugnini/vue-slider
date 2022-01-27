@@ -1,3 +1,2 @@
-console.log('Vue ok', Vue);
-
+console.log('JS OK');
 Vue.config.devtools = true;
