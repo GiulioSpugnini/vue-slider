@@ -13,6 +13,12 @@ const app = new Vue({
         },
         prevImg(images) {
             this.currentIndex === 0 ? this.currentIndex === images.length - 1 : this.currentIndex--;
-        }
+        },
+        setImg() {
+            this.currentIndex = index;
+        },
+        isActive(index) {
+            return index == this.currentIndex;
+        },
     },
 });
