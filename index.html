@@ -21,7 +21,7 @@
                 </div>
                 <div class="col-6">
                     <div class="slider d-flex align-items-center">
-                        <img v-if="isActive(index)" v-for="(image, index) in images" class="img-fluid" :src="image" alt="" />
+                        <img v-if="isActive(index)" v-for="(image, index) in images" :class="{active: isActive(index)}" class="img-fluid" :src="image" alt="" />
                         <div @mouseenter="stopAutoplay" @mouseleave="startAutoplay" class="slider-dots">
                             <div v-for="(image, index) in images" @click="setImg(index)" :class="{active: isActive(index)}" class="dot mx-2"></div>
                         </div>
