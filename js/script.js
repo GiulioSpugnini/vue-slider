@@ -10,10 +10,10 @@ const app = new Vue({
     },
     methods: {
         nextImg() {
-            this.currentIndex === this.images.length - 1 ? this.currentIndex === 0 : this.currentIndex++;
+            this.currentIndex = (this.currentIndex === this.images.length - 1) ? 0 : (this.currentIndex + 1);
         },
         prevImg() {
-            this.currentIndex === 0 ? this.currentIndex === this.images.length - 1 : this.currentIndex--;
+            this.currentIndex = (this.currentIndex === 0) ? (this.images.length - 1) : (this.currentIndex - 1);
         },
         setImg(index) {
             this.currentIndex = index;
