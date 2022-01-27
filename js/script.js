@@ -24,6 +24,9 @@ const app = new Vue({
         startAutoplay() {
             this.autoplay = setInterval(this.nextImg, 3000)
         },
+        stopAutoplay() {
+            clearInterval(this.autoplay);
+        }
     },
     created() {
         this.startAutoplay();
